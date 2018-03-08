@@ -1,6 +1,5 @@
-@extends('layout')
+@extends('layouts.app')
 
 @section('content')
-
-    test
+    @include('pages._brand_list')
 @endsection

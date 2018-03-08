@@ -168,8 +168,7 @@
         </div>
     </div>
     @yield('content')
-
-
+    @yield('footer')
     <!-- Scripts -->
     <script src="{{ asset('public/js/front.js') }}"></script>
 </body>

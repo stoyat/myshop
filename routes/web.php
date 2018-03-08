@@ -12,5 +12,4 @@
 */
 
 Route::get('/', 'Indexcontroller@index')->name('home');
-
-Route::get('/test', 'Testcontroller@index')->name('home');
+Route::get('/test', 'Testcontroller@index')->name('test');
