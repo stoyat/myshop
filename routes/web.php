@@ -11,5 +11,6 @@
 |
 */
 
-Route::get('/', 'Indexcontroller@index')->name('home');
-Route::get('/test', 'Testcontroller@index')->name('test');
+Route::get('/', 'IndexController@index')->name('home');
+Route::get('/product/{slug}', 'IndexController@show')->name('product.show');
+Route::get('/currency', 'Currencycontroller@index');
