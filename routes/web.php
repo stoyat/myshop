@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', 'IndexController@index')->name('home');
-Route::get('/product/{slug}', 'IndexController@show')->name('product.show');
+Route::get('/', 'MainController@index')->name('home');
+Route::get('/product/{slug}', 'MainController@show')->name('product.show');
 Route::get('/currency', 'Currencycontroller@index');
+Route::get('/category/{slug}', 'IndexController@category')->name('category.show');

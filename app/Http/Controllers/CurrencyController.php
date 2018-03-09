@@ -24,6 +24,5 @@ class CurrencyController extends Controller
                 setcookie('currency', $currency, time() + 3600*24*7, '/');
             }
         }
-        return view('pages._hit', ['curr' => $curr]);
     }
 }
