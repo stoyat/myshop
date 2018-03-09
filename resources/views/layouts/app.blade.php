@@ -17,8 +17,9 @@
     <script>$(document).ready(function(){$(".memenu").memenu();});</script>
 </head>
 <body>
-
+    {{--@include('pages.menu')--}}
     @include('pages.header')
+
     @yield('content')
     @yield('footer')
     <!-- Scripts -->
