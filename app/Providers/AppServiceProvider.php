@@ -36,8 +36,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-
-        view()->composer('pages.index', function($view){
+        view()->composer('pages.header', function($view){
             $currencies = Currency::all();
             $view->with('currencies', $currencies);
             $view->with('res', $this->getCurrency($currencies));

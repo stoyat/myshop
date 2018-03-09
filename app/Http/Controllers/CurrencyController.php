@@ -11,6 +11,12 @@ class CurrencyController extends Controller
 {
     public function index()
     {
+       $this->getCurrs();
+       return back();
+    }
+
+    public function getCurrs()
+    {
         $currency = !empty($_GET['curr']) ? $_GET['curr'] : null;
         if($currency){
             $curr = DB::table('currencies')->where('code',$currency)->first();
@@ -18,6 +24,6 @@ class CurrencyController extends Controller
                 setcookie('currency', $currency, time() + 3600*24*7, '/');
             }
         }
-        return redirect()->back();
+        return view('pages._hit', ['curr' => $curr]);
     }
 }

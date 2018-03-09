@@ -2051,7 +2051,7 @@ function clearCart() {
 /*Cart*/
 
 $('#currency').change(function(){
-    window.location = 'currency/change?curr=' + $(this).val();
+    window.location = 'test/?curr=' + $(this).val();
 });
 
 $('.available select').on('change', function(){

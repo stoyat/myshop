@@ -2,7 +2,6 @@
     <div class="container">
         <div class="product-top">
 
-
             @foreach ($hits->chunk(4) as $hit)
                 <div class="product-one">
                 @foreach ($hit as $product)
@@ -14,11 +13,25 @@
                             <div class="product-bottom">
                                 <h3>{{$product->title}}</h3>
                                 <p>{{$product->description}}</p>
-                                <h4><a class="add-to-cart-link"><i></i></a> <span class=" item_price">$ {{$product->price}}</span></h4>
+                                <h4>
+                                    <a class="add-to-cart-link">
+                                        <i></i>
+                                    </a>
+                                    <span class=" item_price">{{$product->price * $val->value}}
+                                        @if($val->symbol_left)
+                                            {{$val->symbol_left}}
+                                        @else
+                                            {{$val->symbol_right}}
+                                        @endif</span></h4>
                                 @if($product->old_price)
                                     <small>
                                         <del>
-                                            {{$product->old_price}} $
+                                            {{$product->old_price * $val->value}}
+                                            @if($val->symbol_left)
+                                                {{$val->symbol_left}}
+                                            @else
+                                                {{$val->symbol_right}}
+                                            @endif
                                         </del>
                                     </small>
                                 @endif
@@ -27,7 +40,7 @@
                                 @if($product->old_price)
                                     <small>
                                         <del>
-                                            <span>{{100 -  (100 * $product->price / $product->old_price)}}</span>
+                                            <span>{{100 -  (100 * $product->price / $product->old_price)}} %</span>
                                         </del>
                                     </small>
                                 @endif
