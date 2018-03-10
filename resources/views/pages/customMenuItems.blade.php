@@ -8,9 +8,9 @@
         <!--Формируем дочерние пункты меню
         метод haschildren() проверяет наличие дочерних пунктов меню-->
         @if($item->hasChildren())
-            <ul class="sub-menu">
+            <ul>
                 <!--метод children() возвращает дочерние пункты меню для текущего пункта-->
-                @include(env('THEME').'.customMenuItems', ['items'=>$item->children()])
+                @include('pages.customMenuItems', ['items'=>$item->children()])
             </ul>
         @endif
     </li>
