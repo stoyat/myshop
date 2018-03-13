@@ -22,7 +22,9 @@ class CurrencyController extends Controller
             $curr = DB::table('currencies')->where('code',$currency)->first();
             if(!empty($curr)){
                 setcookie('currency', $currency, time() + 3600*24*7, '/');
+                return back();
             }
         }
+
     }
 }

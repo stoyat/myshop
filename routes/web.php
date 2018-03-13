@@ -13,5 +13,20 @@
 
 Route::get('/', 'MainController@index')->name('home');
 Route::get('/product/{slug}', 'MainController@show')->name('product.show');
-Route::get('/currency', 'Currencycontroller@index');
+//Route::get('/currency', 'Currencycontroller@index');
 Route::get('/category/{slug}', 'IndexController@category')->name('category.show');
+
+
+Route::get('/currency', [
+    'uses' => 'CurrencyController@index',
+    'as' => 'edit'
+]);
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::group(['middleware' => 'web'], function () {
+    Route::get('/', 'MainController@index')->name('home');
+});

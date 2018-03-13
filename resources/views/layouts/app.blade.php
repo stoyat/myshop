@@ -17,7 +17,7 @@
 @include('pages.menu')
 @yield('content')
 @yield('footer')
-<<script src="{{ asset('public/js/front.js') }}"></script>
+<script src="{{ asset('public/js/front.js') }}"></script>
 <script src="{{ asset('public/js/main.js') }}"></script>
 </body>
 

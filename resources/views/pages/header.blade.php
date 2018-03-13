@@ -46,3 +46,8 @@
     <a href="index.html"><h1>Luxury Watches</h1></a>
 </div>
 <!--start-logo-->
+
+
+<script>
+    var urlEdit = '{{ route('edit') }}';
+</script>

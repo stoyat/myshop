@@ -4,10 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
+use Baum\Node;
 
-class Category extends Model
+class Category extends Node
 {
-    use Sluggable;
+    //use Sluggable;
 
     /**
      * Return the sluggable configuration array for this model.

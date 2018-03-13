@@ -63,7 +63,6 @@ class ViewServiceProvider extends ServiceProvider
         return $mBuilder;
     }
 
-
     /**
      * return view menu
      */
