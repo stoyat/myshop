@@ -21,5 +21,15 @@ return [
         ],
 
     ],
+    [
+        'title' => "Brands",
+        'icon' => 'fa fa-credit-card',
+        'priority' =>'1000',
+        'pages' => [
+            (new Page(\App\Brand::class))
+                ->setIcon('fa fa-fax')
+                ->setPriority(100),
+        ],
+    ],
 
 ];

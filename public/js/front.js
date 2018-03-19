@@ -2050,9 +2050,7 @@ function clearCart() {
 }
 /*Cart*/
 
-$('#currency').change(function(){
-    window.location = 'test/?curr=' + $(this).val();
-});
+
 
 $('.available select').on('change', function(){
     var modId = $(this).val(),

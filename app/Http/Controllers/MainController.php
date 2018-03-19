@@ -10,6 +10,7 @@ class MainController extends IndexController
 {
     public function index()
     {
+
         $val = parent::index();
         $brand = Brand::take(3)->orderBy('id', 'desc')->get();
         $hits = Product::take(8)->where('status', '=', '1')->where('hit', '=', '1')->get();

@@ -27,7 +27,7 @@ class AddToCategories extends Migration
      */
     public function down()
     {
-        Schema::table('posts', function(Blueprint $table){
+        Schema::table('categories', function(Blueprint $table){
             $table->dropColumn('lft');
             $table->dropColumn('rgt');
             $table->dropColumn('depth');

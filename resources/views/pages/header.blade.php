@@ -5,14 +5,24 @@
             <div class="col-md-6 top-header-left">
                 <div class="drop">
                     <div class="box">
-                        <select id="currency" tabindex="4" class="dropdown drop">
-                            <option value="" class="label">{{$res->code}}</option>
-                            @foreach($currencies as $k )
-                                @if($k->code != $res->code)
-                                    <option value="{{$k->code}}">{{$k->code}}</option>
-                                @endif
-                            @endforeach
-                        </select>
+
+
+
+                        {{Form::open(['route'=>['edit'], 'method'=>'Post'])}}
+                            <select id="currency" tabindex="4" class="dropdown drop">
+                                <option value="" class="label">{{$res->code}}</option>
+                                @foreach($currencies as $k )
+                                    @if($k->code != $res->code)
+                                        <option value="{{$k->code}}">{{$k->code}}</option>
+                                    @endif
+                                @endforeach
+                            </select>
+                        {{Form::close()}}
+
+
+
+
+
                     </div>
                     <div class="box1">
                         <select tabindex="4" class="dropdown">

@@ -12,9 +12,8 @@ class AdminSectionsServiceProvider extends ServiceProvider
      * @var array
      */
     protected $sections = [
-        'App\Brand' => 'App\Http\Section\Brand',
         \App\Category::class => 'App\Http\Section\Categories',
-        //\App\Brand::class => 'App\Http\Sections\Brand',
+        \App\Brand::class => 'App\Http\Section\Brands',
     ];
 
     /**

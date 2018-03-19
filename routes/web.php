@@ -22,6 +22,8 @@ Route::get('/currency', [
     'as' => 'edit'
 ]);
 
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
